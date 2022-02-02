@@ -7,8 +7,7 @@ var clickcounter = 0;
 export default function App() {
   const [clickcounter, setclickcounter] = useState(0);
   function clickeventhandler() {
-    var newclickcounter = clickcounter + 1;
-    setclickcounter(newclickcounter);
+    setclickcounter(clickcounter+1);
   }
   return (
     <div className="App">
