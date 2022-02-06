@@ -1,20 +1,18 @@
 import react, { useState } from "react";
 import "./styles.css";
-// var username = prompt("Give your user name");
+var username = prompt("Give your user name");
 var color = "green";
-var username = "Naman";
-var shoppingList = ["milk", "Flowers", "Dhaniya", "lemon", "rava"];
+var userLogedIN = true;
 export default function App() {
+  function getuserMessage() {
+    if (userLogedIN) {
+      return username;
+    }
+    return "user!";
+  }
   return (
     <div className="App">
-      <h1 style={{ backgroundColor: color }}>Welcome {username}</h1>
-      <h2>Shoping list</h2>
-      <ul>
-        {shoppingList.map((item) => {
-          console.log(item);
-          return <li>{item}</li>;
-        })}
-      </ul>
+      <h1 style={{ backgroundColor: color }}>Welcome {getuserMessage()} </h1>
     </div>
   );
 }
